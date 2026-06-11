@@ -1,0 +1,21 @@
+server:
+  port: ${NODE_PORT:8081}
+
+spring:
+  application:
+    name: kv-store-${NODE_ID:node-1}
+
+NODE_ID: ${NODE_ID:node-1}
+NODE_PORT: ${NODE_PORT:8081}
+PRIMARY_HOST: ${PRIMARY_HOST:node-1}
+PEER_NODES: ${PEER_NODES:}
+REPLICATION_FACTOR: ${REPLICATION_FACTOR:3}
+DATA_DIR: ${DATA_DIR:/data}
+
+snapshot:
+  interval:
+    ms: 30000
+
+logging:
+  level:
+    com.kvstore: INFO
